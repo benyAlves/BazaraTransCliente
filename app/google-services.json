@@ -111,6 +111,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "482852522340-f47557jif9eajup8k2f050prjinotdg7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.bazara.saudigitus.bazaratranscliente",
+            "certificate_hash": "a9a926c88db400034cc8fdbcfbe5811f7446d838"
+          }
+        },
+        {
           "client_id": "482852522340-hd66ljpo3f4oh0flj3mj3e3f3rlm0hgm.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

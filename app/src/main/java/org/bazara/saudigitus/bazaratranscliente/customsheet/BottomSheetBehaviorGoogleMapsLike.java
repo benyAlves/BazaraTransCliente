@@ -153,10 +153,10 @@ public class BottomSheetBehaviorGoogleMapsLike<V extends View> extends Coordinat
          * Getting the anchorPoint...
          */
         mAnchorPoint = DEFAULT_ANCHOR_POINT;
-        a = context.obtainStyledAttributes(attrs, R.styleable.CustomBottomSheetBehavior);
-        if (attrs != null)
-            mAnchorPoint = (int) a.getDimension( R.styleable.CustomBottomSheetBehavior_anchorPoint, 0);
-        a.recycle();
+//        a = context.obtainStyledAttributes(attrs, R.styleable.CustomBottomSheetBehavior);
+//        if (attrs != null)
+//            mAnchorPoint = (int) a.getDimension( R.styleable.CustomBottomSheetBehavior_anchorPoint, 0);
+//        a.recycle();
 
         ViewConfiguration configuration = ViewConfiguration.get(context);
         mMinimumVelocity = configuration.getScaledMinimumFlingVelocity();

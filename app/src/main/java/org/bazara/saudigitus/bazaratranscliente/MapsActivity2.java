@@ -13,6 +13,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.firebase.geofire.GeoFire;
@@ -32,10 +34,15 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.PolygonOptions;
+import com.google.android.gms.maps.model.Polyline;
+import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.List;
 
 import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
@@ -68,6 +75,20 @@ public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallbac
     MaterialAnimatedSwitch location_switch;
     SupportMapFragment mapFragment;
     private Location mLastLocation;
+
+
+    //Transporter animation
+    private List<LatLng> polyLineList;
+    private Marker pickupLocationMarker;
+    private float v;
+    private Handler handler;
+    private LatLng startPosition, endPosition, currentPosition;
+    private int index, next;
+    private Button btnGo;
+    private EditText edtPlace;
+    private String destination;
+    private PolylineOptions polygonOptions, blackPolylineOptions;
+    private Polyline blackPolyline, greyPolyline;
 
 
     @Override

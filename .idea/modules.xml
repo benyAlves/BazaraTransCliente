@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BazaraTransCliente.iml" filepath="$PROJECT_DIR$/BazaraTransCliente.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/BazaraTransporte.iml" filepath="$PROJECT_DIR$/.idea/BazaraTransporte.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
