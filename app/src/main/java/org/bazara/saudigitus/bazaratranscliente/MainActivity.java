@@ -1,6 +1,7 @@
 package org.bazara.saudigitus.bazaratranscliente;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Build;
@@ -48,6 +49,9 @@ import org.bazara.saudigitus.bazaratranscliente.customsheet.BottomSheetBehaviorG
 import org.bazara.saudigitus.bazaratranscliente.customsheet.MergedAppBarLayoutBehavior;
 import org.bazara.saudigitus.bazaratranscliente.customsheet.adapter.ItemPagerAdapter;
 
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
 public class MainActivity extends AppCompatActivity implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener, LocationListener, PlaceSelectionListener {
@@ -74,8 +78,16 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     private LatLng destinationLatLng;
 
     @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder().setDefaultFontPath("fonts/Arkhip_font.ttf")
+                                            .setFontAttrId(R.attr.fontPath)
+                                            .build());
         setContentView(R.layout.activity_main);
 
 //        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

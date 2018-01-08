@@ -22,4 +22,8 @@ public interface DataManager {
     void setStepperCallback(StepperLayout.OnNextClickedCallback callback);
 
     void verificarNumero(String otp);
+
+    void saveInFireBase(String password);
+
+    void setNome(String s);
 }

@@ -104,7 +104,7 @@ public class DadosFragment extends Fragment implements BlockingStep {
 
     @Override
     public void onNextClicked(StepperLayout.OnNextClickedCallback callback) {
-        dataManager.setTransportador(new Transportador());
+        dataManager.setNome(tvNomeCompleto.getText().toString());
         callback.goToNextStep();
     }
 

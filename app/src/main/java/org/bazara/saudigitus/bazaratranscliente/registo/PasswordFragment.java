@@ -93,6 +93,7 @@ public class PasswordFragment extends Fragment implements BlockingStep {
     @Override
     public void onCompleteClicked(StepperLayout.OnCompleteClickedCallback callback) {
         Log.w(TAG, "onCompleteClicked: " );
+        dataManager.saveInFireBase(editTextPalavraPasse.getText().toString());
     }
 
     @Override

@@ -1,0 +1,46 @@
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    tools:context="org.bazara.saudigitus.bazaratranscliente.MapsActivity2">
+
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         >
+
+       <android.support.v7.widget.CardView
+           app:cardElevation="10dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_alignParentBottom="true">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:weightSum="10"
+               android:layout_margin="16dp"
+               android:orientation="horizontal">
+
+               <com.github.glomadrian.materialanimatedswitch.MaterialAnimatedSwitch
+                   android:id="@+id/location_switch"
+                   android:layout_width="0dp"
+                   android:layout_weight="3"
+                   android:layout_height="wrap_content"
+                   app:icon_release="@drawable/ic_location_off"
+                   app:icon_press="@drawable/ic_location_on"
+                   app:base_release_color="@color/release_color"
+                   app:base_press_color="@color/press_color"
+                   app:ball_release_color="@color/press_color"
+                   app:ball_press_color="@color/white"/>
+
+           </LinearLayout>
+
+       </android.support.v7.widget.CardView>
+
+     </RelativeLayout>
+
+ </fragment>

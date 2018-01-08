@@ -6,4 +6,7 @@
 
     <color name="white">#ffffff</color>
     <color name="float_transparent">#00000000</color>
+    <color name="release_color">#212121</color>
+    <color name="press_color">#FAFAFA</color>
+    <color name="ball_release_color">#9E9E9E</color>
 </resources>
