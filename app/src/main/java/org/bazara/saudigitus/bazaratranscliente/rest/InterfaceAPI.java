@@ -12,6 +12,7 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
+import retrofit2.http.Url;
 
 /**
  * Created by dalves on 9/12/17.
@@ -40,5 +41,8 @@ public interface InterfaceAPI {
 
      @POST("logout")
      Call<ResponseBody> logOut();
+
+     @GET
+     Call<String> getPath(@Url String url);
 
 }

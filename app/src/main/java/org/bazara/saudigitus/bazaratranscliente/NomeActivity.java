@@ -49,7 +49,7 @@ public class NomeActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         phone = getIntent().getExtras().getString("NUMERO");
         db = FirebaseDatabase.getInstance();
-        users = db.getReference("Users");
+        users = db.getReference("users");
     }
 
 

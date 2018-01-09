@@ -79,7 +79,7 @@ public class RegistoActivity extends AppCompatActivity implements StepperLayout.
 
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseDatabase.getInstance();
-        users = db.getReference("Users");
+        users = db.getReference("users");
         mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
 
             @Override

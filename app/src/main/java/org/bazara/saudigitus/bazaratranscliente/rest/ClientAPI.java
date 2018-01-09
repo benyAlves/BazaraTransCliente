@@ -13,6 +13,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.moshi.MoshiConverterFactory;
+import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 /**
  * Created by dalves on 9/12/17.
@@ -24,6 +25,7 @@ public class ClientAPI {
 
     private final static OkHttpClient client = buildClient();
     private final static Retrofit retrofit = buildRetrofit(client);
+    private static Retrofit retrofitClient = null;
 
     private static OkHttpClient buildClient(){
         OkHttpClient.Builder builder = new OkHttpClient.Builder()
@@ -58,6 +60,17 @@ public class ClientAPI {
                 .addConverterFactory(MoshiConverterFactory.create())
                 .build();
     }
+
+    public static Retrofit getClient(String baseUrl){
+        if(retrofitClient == null)
+            retrofitClient =  new Retrofit.Builder()
+                .baseUrl(baseUrl)
+                .addConverterFactory(ScalarsConverterFactory.create())
+                .build();
+
+        return retrofitClient;
+    }
+
 
     public static <T> T createService(Class<T> service){
         return retrofit.create(service);
